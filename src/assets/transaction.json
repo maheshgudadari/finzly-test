@@ -1,0 +1,20 @@
+
+transaction:{
+    Date:'Today, Monday'
+    [{
+    name:'Wonder pizza guys',
+    description:'payment auth pizzaria'wonder pizza guys'',
+    amount:'-859'
+    },
+    {
+    name:'Another company inc',
+    description:'another company inc',
+    amount:'900'
+    },
+    {
+    name:'Global Little things LLS',
+    description:'withdrawal of personal funds',
+    amount:'-1187'
+    }
+    ]
+    }
