@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { AuthGuardService } from './core/services/auth-guard.service';
+import { ErrorInterceptor } from './core/intercepter/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     SharedModule
   ],
-  providers: [],
+  providers: [AuthGuardService, ErrorInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
