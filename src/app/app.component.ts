@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Finzly';
-  constructor( public router: Router) {
+  isLoggedIn$: Observable<boolean>;
+  constructor( public router: Router, private authService: AuthService) {
     console.log(router.url);
+  }
+  ngOnInit() {
+    this.isLoggedIn$ = this.authService.isLoggedIn;
   }
 }
